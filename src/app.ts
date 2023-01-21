@@ -1,6 +1,13 @@
 console.log("hello")
 
-const person = {
+interface Person {
+    firstName: string,
+    age: number,
+    greet: () => void,
+}
+
+
+const person : Person = {
     firstName: 'Max',
     age: 10,
     greet() {
@@ -8,6 +15,6 @@ const person = {
     }
 }
 
-const {firstName, age}: {firstName: string, age: number} = person
+const {firstName, age}: { firstName: string, age: number } = person
 console.log(firstName);
 console.log(age);
