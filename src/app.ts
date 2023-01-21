@@ -1,20 +1,20 @@
-console.log("hello")
 
-interface Person {
-    firstName: string,
-    age: number,
-    greet: () => void,
+const fetchData = () => {
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve("Done")
+        }, 1500);
+        reject("Rejected");
+    });
+    return promise;
 }
 
+setTimeout(() => {
+    console.log("Timer done!");
+    fetchData().then(text => {
+        console.log(text);
+    })
+}, 2000);
 
-const person : Person = {
-    firstName: 'Max',
-    age: 10,
-    greet() {
-        console.log("Hi I'm " + this.firstName + this.age)
-    }
-}
-
-const {firstName, age}: { firstName: string, age: number } = person
-console.log(firstName);
-console.log(age);
+console.log("main");
+console.log("Running");
