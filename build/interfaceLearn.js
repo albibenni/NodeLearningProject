@@ -1,4 +1,3 @@
-"use strict";
 console.log("hello");
 const person = {
     firstName: 'Max',
@@ -10,4 +9,3 @@ const person = {
 const { firstName, age } = person;
 console.log(firstName);
 console.log(age);
-//# sourceMappingURL=interfaceLearn.js.map
