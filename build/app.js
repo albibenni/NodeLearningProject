@@ -3,12 +3,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const http = require("http");
 const port = 3000;
 const server = http.createServer((req, res) => {
-    // console.log(req.url, req.method, req.headers);
     res.statusCode = 200;
     res.write('<html>');
-    res.write('<head><title> My First Page <title><head>');
-    res.write('<body><h1>Hello from my Node server learn project!<h1><body>');
-    res.write('<html>');
+    res.write('<head><title> My First Page </title></head>');
+    res.write('<body><h1>Hello from my Node server learn project!</h1></body>');
+    res.write('</html>');
     res.end('Hello World\n');
 });
 server.listen(port, () => {
