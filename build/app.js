@@ -15,6 +15,16 @@ const server = http.createServer((req, res) => {
         return res.end('Hello World\n');
     }
     if (url === '/message' && req.method === 'POST') {
+        const body1 = [];
+        req.on('data', (chunk) => {
+            console.log(chunk);
+            body1.push(chunk);
+        });
+        req.on('end', () => {
+            const parsedBody = Buffer.concat(body1).toString();
+            const message = parsedBody.split('=')[1];
+            fs.writeFileSync('message.txt', message);
+        });
         fs.writeFileSync('message.text', 'DUMMY');
         res.statusCode = 302;
         res.setHeader('Location', '/');
