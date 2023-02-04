@@ -25,9 +25,6 @@ const reqHandler = (req, res) => {
                 console.error(err);
             });
         })
-        fs.writeFile('message.text', 'DUMMY', (err) => {
-            console.error(err);
-        });
         res.statusCode = 302;
         res.setHeader('Location', '/');
         return res.end();
