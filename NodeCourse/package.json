@@ -1,18 +1,20 @@
 {
   "name": "NodeCourse",
   "version": "1.0.0",
-  "author": "Alberto Benatti",
+  "author": "",
   "description": "Following the course",
   "main": "index.js",
   "scripts": {
-    "start": "node build/app.js",
+    "start": "nodemon build/app.js",
     "tsc": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
   "license": "ISC",
   "dependencies": {
     "@types/node": "^18.11.18"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }
