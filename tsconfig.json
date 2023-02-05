@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es6",
+    "outDir": "NodeCourse/build",
+    //    "outDir": "NodeBasicServerTest/build",
+    "rootDir": "NodeCourse/src",
+    //    "rootDir": "NodeBasicServerTest/src",
+    "strictNullChecks": true
+  },
+  "include": [
+    "NodeBasicServerTest/src/**/*",
+    "NodeCourse/src/**/*"
+  ]
+}

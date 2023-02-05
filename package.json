@@ -1,11 +1,11 @@
 {
-  "name": "NodeCourse",
+  "name": "NodeLearningProject",
   "version": "1.0.0",
-  "author": "",
-  "description": "Following the course",
+  "author": "Alberto Benatti",
+  "description": "Learning Node and practicing it",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon build/app.js",
+    "start": "nodemon NodeCourse/build/app.js",
     "tsc": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
