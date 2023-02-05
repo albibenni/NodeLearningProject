@@ -1,4 +1,4 @@
-const fetchData = (): Promise<any> => {
+const fetchData = () => {
     const promise = new Promise((resolve, reject) => {
         setTimeout(() => {
             resolve("Done");
@@ -7,13 +7,11 @@ const fetchData = (): Promise<any> => {
     });
     return promise;
 };
-
 setTimeout(() => {
     console.log("Timer done!");
     fetchData().then(text => {
         console.log(text);
     });
 }, 2000);
-
 console.log("main");
 console.log("Running");

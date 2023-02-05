@@ -1,8 +1,8 @@
-import * as http from 'http';
+import {createServer} from "http";
 
 const port = 3000;
 
-const server = http.createServer((req, res) => {
+const server = createServer((req, res): any => {
     console.log(req);
     res.statusCode = 200;
     res.setHeader('Content-Type', 'text/plain');

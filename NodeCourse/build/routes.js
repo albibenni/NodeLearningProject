@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.reqHandler = void 0;
-const fs = require("fs");
+const fs_1 = require("fs");
 const reqHandler = (req, res) => {
     const url = req.url;
     const method = req.method;
@@ -23,7 +23,7 @@ const reqHandler = (req, res) => {
         req.on('end', () => {
             const parsedBody = Buffer.concat(body1).toString();
             const message = parsedBody.split('=')[1];
-            fs.writeFile('message.txt', message, (err) => {
+            (0, fs_1.writeFile)('message.txt', message, (err) => {
                 console.error(err);
             });
         });
