@@ -5,7 +5,7 @@
   "description": "Learning Node and practicing it",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon NodeCourse/build/app.js",
+    "start": "nodemon NodeBasicServerTest/build/app.js",
     "tsc": "tsc -w",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
